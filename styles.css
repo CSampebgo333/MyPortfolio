@@ -146,3 +146,19 @@ footer {
         flex: 1 1 100%;
     }
 }
+
+.social-media {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #ddd;
+}
