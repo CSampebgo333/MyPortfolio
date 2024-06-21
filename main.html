@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- This is the header of the HTML document where we set up the basic info -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <!-- Linking an external CSS file for styling -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- The header section, contains navigation and a menu button -->
     <header>
         <button class="menu-toggle">Menu</button>
         <nav>
+            <!-- This is the navigation menu with links to different sections of the page -->
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -18,17 +22,21 @@
             </ul>
         </nav>
     </header>
+    <!-- The home section with a welcome message -->
     <section id="home">
         <h1>Welcome to My Portfolio</h1>
         <p>Introduction and overview of my work.</p>
     </section>
+    <!-- The about section with information about myself -->
     <section id="about">
         <h2>About Me</h2>
         <p>Information about my background and skills.</p>
     </section>
+    <!-- The portfolio section with projects -->
     <section id="portfolio">
         <h2>Portfolio</h2>
         <div class="projects">
+            <!-- Each project has an image, a title, and a brief description -->
             <div class="project">
                 <img src="project1.jpg" alt="Project 1">
                 <h3>Project Title 1</h3>
@@ -41,6 +49,7 @@
             </div>
         </div>
     </section>
+    <!-- The contact section with a form for visitors to reach out -->
     <section id="contact">
         <h2>Contact</h2>
         <form>
@@ -53,9 +62,11 @@
             <button type="submit">Send</button>
         </form>
     </section>
+    <!-- The footer section with copyright and social media links -->
     <footer>
         <p>&copy; 2024 My Portfolio</p>
         <div class="social-media">
+            <!-- Links to social media profiles -->
             <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
             <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
             <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
@@ -65,6 +76,7 @@
             <a href="my_cv.html" target="_blank">Resume</a>
         </div>
     </footer>
+    <!-- Linking an external JavaScript file for interactive functionality -->
     <script src="scripts.js"></script>
 </body>
 </html>

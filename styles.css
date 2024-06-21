@@ -1,164 +1,186 @@
-/* Global Styles */
+/* This sets the style for the entire page */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    line-height: 1.6;
+    font-family: Arial, sans-serif; /* The text will be in Arial font */
+    margin: 0; /* No space around the edges */
+    padding: 0; /* No space inside the edges */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    line-height: 1.6; /* Space between lines of text */
 }
 
+/* This styles the header at the top of the page */
 header {
-    background-color: #999D9E;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    background-color: #999D9E; /* Gray background color */
+    color: white; /* White text color */
+    padding: 1rem; /* Padding inside the header */
+    text-align: center; /* Center the text */
+    position: fixed; /* Stays at the top when scrolling */
+    width: 100%; /* Takes the full width of the page */
+    top: 0; /* Stays at the top */
+    z-index: 1000; /* Stays above other elements */
 }
 
+/* Styles for the navigation inside the header */
 header nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center the navigation */
+    align-items: center; /* Align items in the center */
 }
 
+/* Styles for the list inside the navigation */
 header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+    list-style: none; /* No bullets */
+    padding: 0; /* No padding */
+    margin: 0; /* No margin */
+    display: flex; /* Flexbox for layout */
 }
 
+/* Styles for each list item */
 header nav ul li {
-    margin: 0 10px;
+    margin: 0 10px; /* Space between items */
 }
 
+/* Styles for the links inside the list items */
 header nav ul li a {
-    color: white;
-    text-decoration: none;
+    color: white; /* White text */
+    text-decoration: none; /* No underline */
 }
 
+/* Styles for the menu button (hidden by default) */
 .menu-toggle {
-    display: none;
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
+    display: none; /* Hidden */
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 1rem; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* Styles for each section of the page */
 section {
-    padding: 5rem 2rem;
-    margin-top: 60px;
+    padding: 5rem 2rem; /* Padding inside the section */
+    margin-top: 60px; /* Space above the section */
 }
 
+/* Center the main headings */
 h1, h2 {
-    text-align: center;
+    text-align: center; /* Center the text */
 }
 
+/* Styles for the projects container */
 .projects {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+    display: flex; /* Flexbox for layout */
+    flex-wrap: wrap; /* Wrap items to the next line */
+    gap: 2rem; /* Space between items */
+    justify-content: center; /* Center the items */
 }
 
+/* Styles for each project */
 .project {
-    flex: 1 1 calc(33.333% - 2rem);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    text-align: center;
-    transition: transform 0.3s;
+    flex: 1 1 calc(33.333% - 2rem); /* Flexible width */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    padding: 1rem; /* Padding inside the project */
+    text-align: center; /* Center the text */
+    transition: transform 0.3s; /* Smooth transformation */
 }
 
+/* Hover effect for projects */
 .project:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slightly enlarge */
 }
 
+/* Styles for project images */
 .project img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Full width of the container */
+    height: auto; /* Keep aspect ratio */
 }
 
+/* Styles for the form */
 form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    max-width: 600px; /* Maximum width */
+    margin: 0 auto; /* Center the form */
 }
 
+/* Styles for form labels */
 form label {
-    margin: 0.5rem 0 0.2rem;
+    margin: 0.5rem 0 0.2rem; /* Space around labels */
 }
 
+/* Styles for form inputs and textareas */
 form input, form textarea {
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 0.5rem; /* Padding inside */
+    margin-bottom: 1rem; /* Space below */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
 }
 
+/* Styles for the form button */
 form button {
-    padding: 0.5rem;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 0.5rem; /* Padding inside the button */
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth color change */
 }
 
+/* Hover effect for the form button */
 form button:hover {
-    background-color: #555;
+    background-color: #555; /* Slightly lighter background */
 }
 
+/* Styles for the footer */
 footer {
-    background-color: #999D9E;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    background-color: #999D9E; /* Gray background */
+    color: white; /* White text */
+    text-align: center; /* Center the text */
+    padding: 1rem 0; /* Padding inside the footer */
+    position: fixed; /* Stays at the bottom when scrolling */
+    width: 100%; /* Takes the full width of the page */
+    bottom: 0; /* Stays at the bottom */
 }
 
+/* Styles for smaller screens */
 @media (max-width: 768px) {
     header nav ul {
-        flex-direction: column;
-        display: none;
+        flex-direction: column; /* Stack items vertically */
+        display: none; /* Hidden by default */
     }
 
     header nav ul.open {
-        display: flex;
+        display: flex; /* Show when the menu is open */
     }
 
     .menu-toggle {
-        display: block;
+        display: block; /* Show the menu button */
     }
 
     .projects {
-        flex-direction: column;
+        flex-direction: column; /* Stack projects vertically */
     }
 
     .project {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* Full width for each project */
     }
 }
 
+/* Styles for social media links */
 .social-media {
-    margin-top: 1rem;
-    text-align: center;
+    margin-top: 1rem; /* Space above the social media links */
+    text-align: center; /* Center the links */
 }
 
+/* Styles for each social media link */
 .social-media a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s;
+    color: white; /* White text */
+    margin: 0 10px; /* Space around links */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s; /* Smooth color change */
 }
 
+/* Hover effect for social media links */
 .social-media a:hover {
-    color: #ddd;
+    color: #ddd; /* Light gray text */
 }
