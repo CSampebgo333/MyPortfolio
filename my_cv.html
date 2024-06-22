@@ -101,7 +101,23 @@
             margin-bottom: 10px; /* Space below each row */
             flex-direction: column; /* Column layout for rows */
         }
-
+        #countdown {
+            position: relative;
+            background-color: #ddd;
+            border-radius: 7px;
+            overflow: hidden;
+            height: 12px;
+            flex-grow: 1;
+            margin-left: 5px;
+        }
+        .countdown-text {
+            position: absolute;
+            width: 100%;
+            text-align: right;
+            line-height: 12px;  /* Match the height of #countdown */
+            color: black;
+            font-size: 12px;
+        }
     </style>
 </head>
 
@@ -128,7 +144,12 @@
             </div>
             <div class="section-content flex-container">
                 <div class="left-align"><strong>BSc. Computer Science</strong></div>
-                <div class="right-align"><strong>Expected Date of Graduation: Jun 2027</strong></div>
+                <div class="right-align", id="t_u_g"><strong>Time Until Graduation:</strong></div>
+                <div class="right-align" id="countdown-container">
+                    <div id="countdown">
+                    <div id="countdown-text"></div>
+                    </div>
+                </div>                
             </div>
             <div class="section-content flex-container">
                 <div class="left-align">Cumulative GPA: 3.50/4.00</div>
@@ -251,6 +272,51 @@
             </div>
         </div>
     </div>
+     <!-- JavaScript for countdown -->
+     <script>
+        function updateCountdown() {
+            // This sets the target date for graduation: June 1, 2027
+            const graduationDate = new Date('2027-07-01T00:00:00');
+            
+            // This gets the current date and time
+            const now = new Date();
+            
+            // This calculates the remaining time until graduation by subtracting the current time from the graduation date
+            const timeRemaining = graduationDate - now;
+    
+            // These lines convert the remaining time into years, months, days, hours, minutes, and seconds
+            const years = Math.floor(timeRemaining / (1000 * 60 * 60 * 24 * 365)); // Calculate years left
+            const months = Math.floor((timeRemaining % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)); // Calculate months left
+            const days = Math.floor((timeRemaining % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)); // Calculate days left
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // Calculate hours left
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60)); // Calculate minutes left
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000); // Calculate seconds left
+    
+            // This gets the HTML element with the id 'countdown' where the countdown will be displayed
+            const countdownElement = document.getElementById('countdown');
+            
+            // This updates the text inside the 'countdown' element with the calculated time remaining
+            countdownElement.innerHTML = `${years}y - ${months}m - ${days}d - ${hours}h - ${minutes}m - ${seconds}s`;
+    
+            // This calculates the total duration from the start date (June 1, 2023) to the graduation date
+            const totalDuration = graduationDate - new Date('2023-07-01T00:00:00');
+            
+            // This calculates the progress percentage based on the time elapsed
+            const progress = ((totalDuration - timeRemaining) / totalDuration) * 100;
+            
+            // This gets the HTML element with the id 'progress-bar' where the progress will be displayed
+            document.getElementById('progress-bar').style.width = `${progress}%`;
+    
+            // This generates a random color for the countdown background
+            const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+            
+            // This sets the background color of the countdown element to the random color
+            countdownElement.style.backgroundColor = randomColor;
+        }
+    
+        // This line calls the updateCountdown function every 1000 milliseconds (1 second) to keep the countdown updated
+        setInterval(updateCountdown, 1000);
+    </script>       
 </body>
 
 </html>
