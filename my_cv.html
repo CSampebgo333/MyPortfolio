@@ -1,107 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- This is the header of the HTML document where we set up the basic info -->
+    <!-- Metadata and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - SAMPEBGO CLEMENT</title>
+    
     <!-- Internal CSS for styling the resume -->
     <style>
+        /* Global body styling */
         body {
-            font-family: Verdana, sans-serif;
-            font-size: 8px;
-            margin: 20px;
-            line-height: 1.6;
+            font-family: Verdana, sans-serif; /* Font style for the document */
+            font-size: 8px; /* Base font size */
+            margin: 0; /* Remove default margin */
+            padding: 20px; /* Add padding around the content */
+            display: flex; /* Flexbox layout for centering the content */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            height: 100vh; /* Full viewport height */
+            background-color: #f4f4f4; /* Background color */
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
         }
+        
+        /* Container for the resume content, simulating an A4 page */
+        .a4 {
+            width: 180mm; /* Width of the A4 container */
+            height: 190mm; /* Height of the A4 container */
+            background: white; /* Background color */
+            padding: 20mm; /* Padding inside the container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for 3D effect */
+            overflow: hidden; /* Hide overflow content */
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+        
+        /* Name styling */
         .name {
-            font-size: 14px;
-            text-align: center;
-            font-weight: bold;
+            font-size: 14px; /* Font size for the name */
+            text-align: center; /* Center align the name */
+            font-weight: bold; /* Bold font */
+            margin-bottom: 5px; /* Space below the name */
         }
+        
+        /* General styling for sections */
         .contact-info, .section {
-            margin-bottom: 20px;
+            margin-bottom: 5px; /* Space below each section */
         }
+        
+        /* Contact information styling */
+        .contact-info {
+            text-align: center; /* Center align contact info */
+        }
+        
+        /* Section title styling */
         .section-title {
-            font-weight: bold;
-            margin-top: 10px;
-            margin-bottom: 5px;
+            font-weight: bold; /* Bold font for section titles */
+            margin-top: 10px; /* Space above the title */
+            margin-bottom: 5px; /* Space below the title */
+            color: gray; /* Text color */
+            position: relative; /* Position relative for the underline */
         }
+        
+        /* Underline for section titles */
+        .section-title::after {
+            content: ''; /* No content, just a visual element */
+            display: block; /* Block level element */
+            width: 100%; /* Full width underline */
+            height: 0.08px; /* Thickness of the underline */
+            background: black; /* Underline color */
+            position: absolute; /* Absolute positioning */
+            bottom: -1px; /* Position below the title */
+            left: 0; /* Align to the left */
+        }
+        
+        /* Section content styling */
         .section-content {
-            margin-left: 20px;
+            display: flex; /* Flexbox layout */
+            justify-content: space-between; /* Space between flex items */
+            margin-left: 20px; /* Indent content */
         }
+        
+        /* Left aligned text */
+        .left-align {
+            text-align: left; /* Left align text */
+        }
+        
+        /* Right aligned text */
+        .right-align {
+            text-align: right; /* Right align text */
+        }
+        
+        /* Flex container for sections */
+        .flex-container {
+            display: flex; /* Flexbox layout */
+            justify-content: space-between; /* Space between flex items */
+        }
+        
+        /* Row styling */
+        .row {
+            margin-bottom: 10px; /* Space below each row */
+            flex-direction: column; /* Column layout for rows */
+        }
+
     </style>
 </head>
+
 <body>
-    <!-- Name of the person in big, bold text -->
-    <div class="name">SAMPEBGO CLEMENT</div>
-    <!-- Contact information -->
-    <div class="contact-info">
-        1 University Avenue, Berekuso<br>
-        Phone numbers: +2330503848241 / +22676707771<br>
-        Email: <a href="mailto:clement.sampebgo@ashesi.edu.gh">clement.sampebgo@ashesi.edu.gh</a><br>
-        LinkedIn: <a href="https://www.linkedin.com/in/clement-sampebgo" target="_blank">www.linkedin.com/in/clement-sampebgo</a>
-    </div>
-
-    <!-- Education section -->
-    <div class="section">
-        <div class="section-title">Education</div>
-        <div class="section-content">
-            <strong>Ashesi University</strong>, Berekuso, Eastern Region<br>
-            BSc. Computer Science - Expected Date of Graduation: Jun 2027<br>
-            Cumulative GPA: 3.50/4.00<br><br>
-
-            <strong>Lycee Bogodogo</strong>, Ouagadougou, Center region<br>
-            Scientific Baccalaureate-Serie D - June 2022<br>
-            Cumulative GPA: 3.5/4.00
+    <!-- Main resume container -->
+    <div class="a4">
+        <!-- Name section -->
+        <div class="name">SAMPEBGO CLEMENT</div>
+        
+        <!-- Contact information section -->
+        <div class="contact-info">
+            1 University Avenue, Berekuso<br>
+            Phone numbers: +2330503848241 / +22676707771<br>
+            Email: <a href="mailto:clement.sampebgo@ashesi.edu.gh">clement.sampebgo@ashesi.edu.gh</a><br>
+            LinkedIn: <a href="https://www.linkedin.com/in/clement-sampebgo" target="_blank">www.linkedin.com/in/clement-sampebgo</a>
         </div>
-    </div>
 
-    <!-- Achievements and awards section -->
-    <div class="section">
-        <div class="section-title">Achievement/Awards</div>
-        <div class="section-content">
-            <!-- Insert specific achievements and awards here if provided -->
+        <!-- Education section -->
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="section-content flex-container">
+                <div class="left-align"><strong>Ashesi University</strong></div>
+                <div class="right-align"><strong>Berekuso, Eastern Region</strong></div>
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align"><strong>BSc. Computer Science</strong></div>
+                <div class="right-align"><strong>Expected Date of Graduation: Jun 2027</strong></div>
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align">Cumulative GPA: 3.50/4.00</div>
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align"><strong>Lycee Bogodogo</strong></div>
+                <div class="right-align"><strong>Ouagadougou, Center region</strong></div>
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align"><strong>Scientific Baccalaureate-Serie D</strong></div>
+                <div class="right-align"><strong>June 2022</strong></div>
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align">Cumulative GPA: 3.5/4.00</div>
+            </div>
         </div>
-    </div>
 
-    <!-- Skills and interests section -->
-    <div class="section">
-        <div class="section-title">Skills/Interests</div>
-        <div class="section-content">
-            <strong>Languages:</strong> English (Fluent), French (Excellent)<br>
-            <strong>Technologies:</strong> Microsoft Tools, Google Workspace<br>
-            <strong>Skills:</strong> Web development, Programming languages (Python, C, JavaScript), Leadership and organization<br>
-            <strong>Sport:</strong> Gym, Endurance, Running
+        <!-- Achievement/Awards section -->
+        <div class="section">
+            <div class="section-title">Achievement/Awards</div>
+            <div class="section-content flex-container">
+                <div class="left-align"><strong>Upcoming 1--------------------</strong></div>
+                <div class="right-align">Details-----------</div>
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align"><strong>Upcoming 2--------------------</strong></div>
+                <div class="right-align">Details-----------</div>
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align"><strong>Upcoming 3--------------------</strong></div>
+                <div class="right-align">Details-----------</div>
+            </div>
         </div>
-    </div>
 
-    <!-- Work, internship, and volunteer experience section -->
-    <div class="section">
-        <div class="section-title">Work/Internship/Volunteer Experience</div>
-        <div class="section-content">
-            <strong>Founder of the Association Ned la Boumbou</strong> - Since February 2023<br>
-            A humanity association that helps internally displaced persons due to terrorism in Burkina Faso.<br><br>
+        <!-- Skills/Interests section -->
+        <div class="section">
+            <div class="section-title">Skills/Interests</div>
+            <div class="section-content flex-container">
+                <div class="left-align"><strong>Languages: </strong>English (Fluent), French (Excellent)</div>
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align"><strong>Technologies: </strong>Microsoft Tools, Google Workspace</div>
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align"><strong>Skills:</strong>
+                    <ul>
+                        <li>Web development</li>
+                        <li>Programming languages: Python, C, JavaScript</li>
+                        <li>Leadership and organization</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align"><strong>Sports: </strong>Gym, Endurance, Running</div>
+            </div>
+        </div> 
 
-            <strong>Author of TikTok account followed by more than 5000 persons</strong> - Since 2022
+        <!-- Work/Internship/Volunteer Experience section -->
+        <div class="section">
+            <div class="section-title">Work/Internship/Volunteer Experience</div>
+            <div class="section-content flex-container">
+                <div class="left-align"><strong>Founder</strong> of the Association Ned la Boumbou</div>
+                <div class="right-align">Since February 2023</div>
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align">A humanity association that helps internally displaced persons due to terrorism in Burkina Faso.</div>
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align"><strong>Author</strong> of TikTok account followed by more than 5000 persons</div>
+                <div class="right-align">Since 2022</div>
+            </div>
         </div>
-    </div>
 
-    <!-- Training and certification section -->
-    <div class="section">
-        <div class="section-title">Training and Certification</div>
-        <div class="section-content">
-            <strong>ALX, Software Engineering</strong> - February 2023 – March 2025<br>
-            Key courses: Programming, Data Analysis, Web development<br><br>
-
-            <strong>Meta, Front-End Web Development</strong> - April 2023 – July 2023<br>
-            Key courses: HTML, CSS, JavaScript, Bootstrap, React, Capstone, UX/UI Design<br><br>
-
-            <strong>Mastercard Scholars’ s Baobab</strong> - February 2023<br>
-            Key courses: Leadership, Techniques of studying<br><br>
-
-            <strong>1%CLUB</strong> - May 2023<br>
-            Key courses: Business Development Module conducted by One Percent Club
+        <!-- Training and Certification section -->
+        <div class="section">
+            <div class="section-title">Training and Certification</div>
+            <div class="section-content flex-container">
+                <div class="left-align"><strong>ALX, Software Engineering</strong></div>
+                <div class="right-align">February 2023 – March 2025</div>
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align">
+                    <ul>
+                        <li><strong>Key courses: </strong>Programming(C, Python), Data Analysis, Web development</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align"><strong>Meta, Front-End Web Development</strong></div>
+                <div class="right-align">April 2023 – July 2023</div>   
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align">
+                    <ul>
+                        <li><strong>Key courses: </strong>HTML, CSS, JavaScript, Bootstrap, React, Capstone, UX/UI Design</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align"><strong>Mastercard Scholars’ s Baobab</strong></div>
+                <div class="right-align">February 2023</div>   
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align">
+                    <ul>
+                        <li><strong>Key courses: </strong>Leadership, Techniques of studying</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align"><strong>1%CLUB</strong></div>
+                <div class="right-align">May 2023</div>   
+            </div>
+            <div class="section-content flex-container">
+                <div class="left-align">
+                    <ul>
+                        <li><strong>Key courses: </strong>Business Development Module conducted by One Percent Club</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
