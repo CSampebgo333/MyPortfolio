@@ -25,3 +25,14 @@ document.querySelectorAll('nav a').forEach(anchor => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const contactSection = document.getElementById('contact-form');
+
+    fetch('contact.html')
+        .then(response => response.text())
+        .then(data => {
+            contactSection.innerHTML = data;
+        })
+        .catch(error => console.error('Error loading the contact form:', error));
+});
