@@ -9,12 +9,10 @@
 <body>
     <header>
         <div class="logo">
-            <!-- Change 'Extern' to 'Home' -->
             <a href="#home"><img src="logo.png" alt="Logo">Home</a>
         </div>
         <nav>
             <ul>
-                <!-- Update navigation items as per instructions -->
                 <li><a href="#home">Experiences</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
@@ -22,7 +20,6 @@
                 <li><a href="#about">About</a></li>
             </ul>
         </nav>
-        <!-- Remove the 'Login' button -->
     </header>
     <section id="home" class="hero">
         <div class="hero-content">
@@ -31,12 +28,12 @@
             <a href="#externships" class="button">Explore Externships now</a>
         </div>
         <div class="hero-images">
-            <img src="person1.jpg" alt="Person 1">
-            <img src="person2.jpg" alt="Person 2">
-            <img src="person3.jpg" alt="Person 3">
-            <img src="person4.jpg" alt="Person 4">
-            <img src="person5.jpg" alt="Person 5">
-            <img src="person6.jpg" alt="Person 6">
+            <img src="images/IMG_783.jpg" alt="Person 1">
+            <img src="images/IMG_784.jpg" alt="Person 2">
+            <img src="images/IMG_785.jpg" alt="Person 3">
+            <img src="images/IMG_786.jpg" alt="Person 4">
+            <img src="images/IMG_787.jpg" alt="Person 5">
+            <img src="images/IMG_788.jpg" alt="Person 6">
         </div>
     </section>
     <section id="about">
@@ -47,48 +44,84 @@
         <h2>Portfolio</h2>
         <div class="projects">
             <div class="project">
-                <img src="project1.jpg" alt="Project 1">
+                <img src="images/IMG_789.jpg" alt="Project 1">
                 <h3>Project Title 1</h3>
                 <p>Brief description of Project 1.</p>
             </div>
             <div class="project">
-                <img src="project2.jpg" alt="Project 2">
+                <img src="images/IMG_790.jpg" alt="Project 2">
                 <h3>Project Title 2</h3>
                 <p>Brief description of Project 2.</p>
             </div>
         </div>
     </section>
     <section id="contact">
-        <h2>Contact</h2>
-        <!-- Update Contact form to match the referenced image -->
+        <h2>Ready to get started?</h2>
+        <p>Learn how Externships can help you prosper</p>
         <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="phone">Phone number:</label>
-            <input type="tel" id="phone" name="phone" required>
-            <!-- Add optional fields for 'Role' and 'Organization' -->
-            <label for="role">Role:</label>
-            <input type="text" id="role" name="role">
-            <label for="organization">Organization:</label>
-            <input type="text" id="organization" name="organization">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
+            <div class="form-group full-width">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group half-width">
+                <label for="role">Role:</label>
+                <input type="text" id="role" name="role">
+            </div>
+            <div class="form-group half-width">
+                <label for="organization">Organization:</label>
+                <input type="text" id="organization" name="organization">
+            </div>
+            <div class="form-group half-width">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group half-width">
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group full-width">
+                <label for="message">Leave us a note:</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
             <button type="submit">Submit</button>
         </form>
     </section>
     <footer>
         <p>&copy; 2024 My Portfolio</p>
-        <div class="social-media">
-            <h3>Social media</h3>
-            <!-- Organize social media links vertically as per the reference image -->
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-            <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
-            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
-            <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
-            <a href="https://tiktok.com/@yourprofile" target="_blank">TikTok</a>
-            <a href="my_cv.html" target="_blank">Resume</a>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>WORK EXPERIENCE</h3>
+                    <a href="#">Students</a>
+                    <a href="#">Companies</a>
+                    <a href="#">Higher Ed</a>
+                </div>
+                <div class="footer-column">
+                    <h3>SOCIAL MEDIA</h3>
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+                    <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+                    <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
+                    <a href="https://tiktok.com/@yourprofile" target="_blank">TikTok</a>
+                    <a href="my_cv.html" target="_blank">Resume</a>
+                </div>
+                <div class="footer-column">
+                    <h3>RESOURCES</h3>
+                    <a href="#">Blog</a>
+                    <a href="#">Apply to be an Extern</a>
+                    <a href="#">Signup for Newsletter</a>
+                </div>
+                <div class="footer-column">
+                    <h3>ABOUT</h3>
+                    <a href="#">Mission and values</a>
+                    <a href="#">Contact support</a>
+                    <a href="#">Terms of service</a>
+                    <a href="#">Privacy policy</a>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="scripts.js"></script>
