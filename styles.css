@@ -1,279 +1,208 @@
 /* Reset default styles */
-/* This means that we start with a clean slate by removing any default spaces and styles the browser adds */
 * {
-    margin: 0; /* Remove all margins (spaces outside an element) */
-    padding: 0; /* Remove all paddings (spaces inside an element) */
-    box-sizing: border-box; /* Make sure padding and border are included in the element's total width and height */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Body and overall styling */
-/* Here we style the main part of our webpage */
 body {
-    font-family: Arial, sans-serif; /* Use the Arial font for our text, with sans-serif as backup */
-    line-height: 1.6; /* Space between lines of text to make it easy to read */
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
 }
 
-/* Styling the header */
-/* The header is like a title banner at the top of our page */
+/* Header styling */
 header {
-    display: flex; /* Use flexbox to lay out items in a row */
-    justify-content: space-between; /* Spread items out evenly across the space */
-    align-items: center; /* Align items in the center vertically */
-    padding: 20px; /* Add space around the header content */
-    background-color: #999D9E; /* Gray background color */
-    color: white; /* White text color */
-    position: fixed; /* Stays at the top when scrolling */
-    width: 100%; /* Takes the full width of the page */
-    top: 0; /* Stays at the top */
-    z-index: 1000; /* Stays above other elements */
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Styling the logo inside the header */
-/* The logo is a small picture in the header */
-header .logo img {
-    width: 100px; /* Make the logo 100 pixels wide */
+.logo a {
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-/* Styling the navigation bar (nav) inside the header */
-/* The nav is a list of links to other parts of the website */
-header nav {
-    display: flex; /* Flexbox for layout */
-    justify-content: center; /* Center the navigation */
-    align-items: center; /* Align items in the center */
+nav ul {
+    list-style: none;
+    display: flex;
 }
 
-/* Styling the list inside the navigation */
-header nav ul {
-    list-style: none; /* No bullets */
-    padding: 0; /* No padding */
-    margin: 0; /* No margin */
-    display: flex; /* Flexbox for layout */
+nav ul li {
+    margin-right: 20px;
 }
 
-/* Styling each item (li) in the navigation list */
-/* These are the individual links in the navigation bar */
-header nav ul li {
-    margin: 0 10px; /* Space between items */
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
 }
 
-/* Styling the links (a) inside each list item */
-/* These are the clickable parts of the navigation bar */
-header nav ul li a {
-    color: white; /* White text */
-    text-decoration: none; /* No underline */
-    font-weight: bold; /* Make the link text bold */
-}
-
-/* Styles for the menu button (hidden by default) */
-.menu-toggle {
-    display: none; /* Hidden */
-    background-color: #333; /* Dark background */
-    color: white; /* White text */
-    border: none; /* No border */
-    padding: 1rem; /* Padding inside the button */
-    cursor: pointer; /* Pointer cursor on hover */
-}
-
-/* Styling the login button */
-/* This is a special link that looks like a button */
-.login-button {
-    text-decoration: none; /* Remove the underline from the link */
-    color: white; /* Make the text color white */
-    background-color: black; /* Make the button background color black */
-    padding: 10px 20px; /* Add space inside the button (top/bottom: 10px, left/right: 20px) */
-    border-radius: 5px; /* Round the corners of the button */
-}
-
-/* Styling the hero section */
-/* The hero section is a big, eye-catching area at the top of the page */
+/* Hero section styling */
 .hero {
-    display: flex; /* Use flexbox to lay out items in a row */
-    justify-content: space-between; /* Spread items out evenly across the space */
-    align-items: center; /* Align items in the center vertically */
-    padding: 50px; /* Add space around the hero content */
-    background-color: #f9f9f9; /* Make the background color light gray */
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 60px;
 }
 
-/* Styling the content inside the hero section */
-/* This is the text part of the hero section */
 .hero-content {
-    max-width: 50%; /* Make the content take up no more than half the width of the hero section */
+    margin-bottom: 30px;
 }
 
-/* Styling the big title (h1) inside the hero content */
-/* This is a big, important heading */
 .hero-content h1 {
-    font-size: 48px; /* Make the text really big (48 pixels) */
-    margin-bottom: 20px; /* Add space below the heading */
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-/* Styling the paragraph (p) inside the hero content */
-/* This is a smaller text block in the hero section */
 .hero-content p {
-    font-size: 18px; /* Make the text a bit bigger (18 pixels) */
-    margin-bottom: 20px; /* Add space below the paragraph */
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-/* Styling the button inside the hero content */
-/* This is a link that looks like a button */
 .hero-content .button {
-    text-decoration: none; /* Remove the underline from the link */
-    color: black; /* Make the text color black */
-    border: 2px solid black; /* Add a black border around the button */
-    padding: 10px 20px; /* Add space inside the button (top/bottom: 10px, left/right: 20px) */
-    border-radius: 5px; /* Round the corners of the button */
-    font-weight: bold; /* Make the button text bold */
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-/* Styling the images section inside the hero */
-/* This part holds pictures in the hero section */
 .hero-images {
-    display: flex; /* Use flexbox to lay out items in a row */
-    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
-    max-width: 50%; /* Make the images take up no more than half the width of the hero section */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-/* Styling the images inside the hero */
-/* These are the individual pictures in the hero section */
 .hero-images img {
-    width: 50%; /* Make each image take up half the width of its container */
-    padding: 5px; /* Add space around each image */
-    border-radius: 10px; /* Round the corners of each image */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
 }
 
-/* Styling each section */
-/* These are the different parts of our webpage */
+/* Section styling */
 section {
-    padding: 5rem 2rem; /* Add space around each section */
-    margin-top: 60px; /* Space above the section */
+    padding: 5rem 2rem;
 }
 
-/* Center the main headings */
 h1, h2 {
-    text-align: center; /* Center the text */
+    text-align: center;
 }
 
-/* Styling the projects section */
-/* This part holds the projects we want to show */
+/* Portfolio section styling */
 .projects {
-    display: flex; /* Use flexbox to lay out items in a row */
-    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
-    gap: 2rem; /* Space between items */
-    justify-content: center; /* Center the items */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
 }
 
-/* Styling each project */
-/* These are the individual project blocks */
 .project {
-    flex: 1 1 calc(33.333% - 2rem); /* Flexible width */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
-    padding: 1rem; /* Padding inside the project */
-    text-align: center; /* Center the text */
-    transition: transform 0.3s; /* Smooth transformation */
+    flex: 1 1 calc(33.333% - 2rem);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s;
 }
 
-/* Hover effect for projects */
 .project:hover {
-    transform: scale(1.05); /* Slightly enlarge */
+    transform: scale(1.05);
 }
 
-/* Styling the project images */
 .project img {
-    max-width: 100%; /* Full width of the container */
-    height: auto; /* Keep aspect ratio */
+    max-width: 100%;
+    height: auto;
 }
 
-/* Styling the form */
-form {
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Stack items vertically */
-    max-width: 600px; /* Maximum width */
-    margin: 0 auto; /* Center the form */
+/* Contact form styling */
+#contact form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* Styling the form labels */
-form label {
-    margin: 0.5rem 0 0.2rem; /* Space around labels */
+#contact form label {
+    display: block;
+    margin: 10px 0 5px;
 }
 
-/* Styling the form inputs and textareas */
-form input, form textarea {
-    padding: 0.5rem; /* Padding inside */
-    margin-bottom: 1rem; /* Space below */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 4px; /* Rounded corners */
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-/* Styling the form button */
-form button {
-    padding: 0.5rem; /* Padding inside the button */
-    background-color: #333; /* Dark background */
-    color: white; /* White text */
-    border: none; /* No border */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth color change */
+#contact form button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Hover effect for the form button */
-form button:hover {
-    background-color: #555; /* Slightly lighter background */
-}
-
-/* Styling the footer */
-/* The footer is the section at the bottom of our webpage */
+/* Footer styling */
 footer {
-    padding: 20px; /* Add space around the footer content */
-    background-color: #999D9E; /* Gray background */
-    color: white; /* White text */
-    text-align: center; /* Center the text horizontally */
-    position: fixed; /* Stays at the bottom when scrolling */
-    width: 100%; /* Takes the full width of the page */
-    bottom
-
-: 0; /* Stays at the bottom */
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Styling the social media links inside the footer */
-/* These are the clickable links to social media pages */
 footer .social-media {
-    margin-top: 1rem; /* Space above the social media links */
-    text-align: center; /* Center the links */
+    margin-top: 20px;
+    text-align: center;
 }
 
-/* Styling each social media link */
+footer .social-media h3 {
+    margin-bottom: 10px;
+}
+
 footer .social-media a {
-    text-decoration: none; /* Remove the underline from the links */
-    color: white; /* Make the link text color white */
-    margin: 0 10px; /* Add space to the left and right of each link */
-    transition: color 0.3s; /* Smooth color change */
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 0.3s;
 }
 
-/* Hover effect for social media links */
 footer .social-media a:hover {
-    color: #ddd; /* Light gray text */
+    color: #ddd;
 }
 
 /* Styles for smaller screens */
 @media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column; /* Stack items vertically */
-        display: none; /* Hidden by default */
+    nav ul {
+        flex-direction: column;
+        display: none;
     }
 
-    header nav ul.open {
-        display: flex; /* Show when the menu is open */
-    }
-
-    .menu-toggle {
-        display: block; /* Show the menu button */
+    nav ul.open {
+        display: flex;
     }
 
     .projects {
-        flex-direction: column; /* Stack projects vertically */
+        flex-direction: column;
     }
 
     .project {
-        flex: 1 1 100%; /* Full width for each project */
+        flex: 1 1 100%;
     }
 }

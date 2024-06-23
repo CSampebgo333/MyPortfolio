@@ -9,18 +9,20 @@
 <body>
     <header>
         <div class="logo">
-            <a href="#home"><img src="logo.png" alt="Logo"></a>
+            <!-- Change 'Extern' to 'Home' -->
+            <a href="#home"><img src="logo.png" alt="Logo">Home</a>
         </div>
         <nav>
             <ul>
-                <li><a href="#home">Students</a></li>
-                <li><a href="#about">Companies</a></li>
-                <li><a href="#portfolio">Higher Ed</a></li>
-                <li><a href="#resources">Resources</a></li>
+                <!-- Update navigation items as per instructions -->
+                <li><a href="#home">Experiences</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
         </nav>
-        <a href="#login" class="login-button">Login</a>
+        <!-- Remove the 'Login' button -->
     </header>
     <section id="home" class="hero">
         <div class="hero-content">
@@ -58,19 +60,29 @@
     </section>
     <section id="contact">
         <h2>Contact</h2>
+        <!-- Update Contact form to match the referenced image -->
         <form>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <!-- Add optional fields for 'Role' and 'Organization' -->
+            <label for="role">Role:</label>
+            <input type="text" id="role" name="role">
+            <label for="organization">Organization:</label>
+            <input type="text" id="organization" name="organization">
             <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Submit</button>
         </form>
     </section>
     <footer>
         <p>&copy; 2024 My Portfolio</p>
         <div class="social-media">
+            <h3>Social media</h3>
+            <!-- Organize social media links vertically as per the reference image -->
             <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
             <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
             <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
