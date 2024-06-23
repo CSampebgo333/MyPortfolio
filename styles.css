@@ -14,20 +14,25 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
 
-.logo a {
-    text-decoration: none;
-    color: #000;
-    font-size: 24px;
-    font-weight: bold;
+/* Logo styling */
+.home_logo a {
+    display: flex;
+    align-items: center;
 }
 
+.home_logo img {
+    width: 50px;
+    height: auto;
+}
+
+/* Navigation styling */
 nav ul {
     list-style: none;
     display: flex;
@@ -38,10 +43,26 @@ nav ul li a {
     text-decoration: none;
     color: #000;
     font-size: 18px;
+    display: inline-block;
+    padding: 5px 10px;
+    transition: box-shadow 0.5s, transform 0.3s;
 }
-/* Add this new rule */
+
 nav ul li:last-child {
-    margin-right: 50px; /* Adjust the value as needed */
+    margin-right: 50px;
+}
+
+nav ul li a:hover {
+    animation: shake 0.7s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Define the keyframes for the shaking animation */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
 }
 
 /* Hero section styling */
@@ -158,12 +179,13 @@ footer {
 
 .footer-column a {
     display: block;
-    color: #fff;
+    color: #ccc;
     text-decoration: none;
-    margin-bottom: 5px;
+    margin: 5px 0;
 }
 
 .footer-column a:hover {
+    color: white;
     text-decoration: underline;
 }
 
@@ -186,6 +208,60 @@ footer {
 
 .social-media a:hover {
     color: #ddd;
+}
+
+/* Contact form styling */
+#contact {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#contact form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+#contact form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact form .form-group.full-width {
+    grid-column: span 2;
+}
+
+#contact form label {
+    margin-bottom: 5px;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact form textarea {
+    resize: none;
+}
+
+#contact form button {
+    grid-column: span 2;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Styles for smaller screens */
@@ -220,88 +296,38 @@ footer {
     .footer-column {
         align-items: center;
     }
+
+    header nav ul li a {
+        padding: 10px;
+        transition: box-shadow 0.3s, transform 0.1s;
+    }
+
+    header nav ul li a:hover {
+        animation: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    header nav ul li:last-child {
+        margin-right: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+    }
 }
 
-/* Add these styles to your existing CSS */
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 14px;
+    }
 
-.footer-column {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px;
-}
-
-.footer-column h3 {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-    color: white;
-}
-
-.footer-column a {
-    display: block;
-    color: #ccc;
-    text-decoration: none;
-    margin: 5px 0;
-}
-
-.footer-column a:hover {
-    color: white;
-}
-
-/* Contact form styling */
-#contact {
-    background-color: #f9f9f9;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#contact form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    max-width: 600px; /* Reduced width */
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px; /* Reduced gap */
-}
-
-#contact form .form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-#contact form .form-group.full-width {
-    grid-column: span 2;
-}
-
-#contact form label {
-    margin-bottom: 5px;
-}
-
-#contact form input,
-#contact form textarea {
-    width: 100%;
-    padding: 8px; /* Reduced padding */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#contact form textarea {
-    resize: none; /* Prevent resizing */
-}
-
-#contact form button {
-    grid-column: span 2;
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    .home_logo img {
+        width: 50px; /* Adjust as needed */
+        height: auto;
+    }
 }

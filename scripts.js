@@ -26,13 +26,15 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const contactSection = document.getElementById('contact-form');
+// Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+    // Select the menu toggle button and the navigation menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('header nav ul');
 
-    fetch('contact.html')
-        .then(response => response.text())
-        .then(data => {
-            contactSection.innerHTML = data;
-        })
-        .catch(error => console.error('Error loading the contact form:', error));
+    // Add an event listener to the menu toggle button
+    menuToggle.addEventListener('click', function () {
+        // Toggle the 'open' class on the navigation menu
+        navMenu.classList.toggle('open');
+    });
 });

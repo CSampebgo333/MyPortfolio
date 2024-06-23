@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design meta tag -->
+    <title>My Portfolio</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file for styling -->
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="#home"><img src="logo.png" alt="Logo">Home</a>
+        <div class="home_logo">
+            <!-- Logo linking to the home section -->
+            <a href="#home"><img src="images/home_wood.jpg" alt="Logo"></a>
         </div>
         <nav>
             <ul>
+                <!-- Navigation menu linking to different sections of the page -->
                 <li><a href="#home">Experiences</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
@@ -21,13 +23,21 @@
             </ul>
         </nav>
     </header>
+    <section id="about">
+        <!-- About Me section -->
+        <h2>About Me</h2>
+        <p>Information about my background and skills.</p>
+    </section>
     <section id="home" class="hero">
         <div class="hero-content">
+            <!-- Main headline and description in the hero section -->
             <h1>Professional Experience Anytime, Anywhere.</h1>
             <p>Here are my Experiences.</p>
+            <!-- Button linking to the Experiences section -->
             <a href="#Experiences" class="button">Explore my Experiences now</a>
         </div>
         <div class="hero-images">
+            <!-- Image gallery in the hero section -->
             <img src="images/IMG_2783.jpg" alt="Person 1">
             <img src="images/IMG_2784.jpg" alt="Person 2">
             <img src="images/IMG_2785.jpg" alt="Person 3">
@@ -36,13 +46,11 @@
             <img src="images/IMG_2788.jpg" alt="Person 6">
         </div>
     </section>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Information about my background and skills.</p>
-    </section>
     <section id="portfolio">
+        <!-- Portfolio section -->
         <h2>Portfolio</h2>
         <div class="projects">
+            <!-- Individual project entries -->
             <div class="project">
                 <img src="images/IMG_2789.jpg" alt="Project 1">
                 <h3>Project Title 1</h3>
@@ -56,8 +64,10 @@
         </div>
     </section>
     <section id="contact">
+        <!-- Contact section -->
         <h2>Let’s Make Something Great Together. Get in Touch!</h2>
         <form>
+            <!-- Form groups for user inputs -->
             <div class="form-group full-width">
                 <label for="name">Name *:</label>
                 <input type="text" id="name" name="name" required>
@@ -82,12 +92,15 @@
                 <label for="message">Leave me a note:</label>
                 <textarea id="message" name="message"></textarea>
             </div>
+            <!-- Submit button -->
             <button type="submit">Submit</button>
         </form>
     </section>
     <footer>
+        <!-- Footer section -->
         <p>&copy; 2024 My Portfolio</p>
         <div class="footer-content">
+            <!-- Footer columns with links -->
             <div class="footer-column">
                 <h3>About Me</h3>
                 <a href="#about">Bio</a>
@@ -97,20 +110,21 @@
             </div>
             <div class="footer-column">
                 <h3>Skills</h3>
-                <a href="#Programming Languages">Programming Languages</a>
-                <a href="#Tools & Technologies">Tools & Technologies</a>
+                <a href="#programming-languages">Programming Languages</a>
+                <a href="#tools-&-technologies">Tools & Technologies</a>
                 <a href="#soft-skills">Soft Skills</a>
             </div>
             <div class="footer-column">
                 <h3>Experiences</h3>
-                <a href="#Internships & Work Experience">Internships & Work Experience</a>
-                <a href="#Research & Academic Projects">Research & Academic Projects</a>
-                <a href="#Freelance & Volunteer Work">Freelance & Volunteer Work</a>
-                <a href="#Certifications & Workshops">Certifications & Workshops</a>
+                <a href="#internships-&-work-experience">Internships & Work Experience</a>
+                <a href="#research-&-academic-projects">Research & Academic Projects</a>
+                <a href="#freelance-&-volunteer Work">Freelance & Volunteer Work</a>
+                <a href="#certifications-&-workshops">Certifications & Workshops</a>
                 <a href="#conferences">Conferences & Workshops Attended</a>
             </div>
             <div class="footer-column">
                 <h3>Social Media</h3>
+                <!-- Social media links -->
                 <a href="https://www.linkedin.com/in/yourprofile" target="_blank">Facebook</a>
                 <a href="https://github.com/yourprofile" target="_blank">LinkedIn</a>
                 <a href="https://twitter.com/yourprofile" target="_blank">GitHub</a>
@@ -118,8 +132,11 @@
                 <a href="https://tiktok.com/@yourprofile" target="_blank">TikTok</a>
             </div>
         </div>
-        <div class="footer-row"><h3>Contact: </h3> </div>
-    </footer>    
+        <div class="footer-row">
+            <h3>Contact: </h3>
+        </div>
+    </footer>
+    <!-- Link to external JavaScript file -->
     <script src="scripts.js"></script>
 </body>
 </html>
