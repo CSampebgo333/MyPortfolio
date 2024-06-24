@@ -26,15 +26,21 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Ensure the script runs after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
-    // Select the menu toggle button and the navigation menu
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('header nav ul');
-
-    // Add an event listener to the menu toggle button
-    menuToggle.addEventListener('click', function () {
-        // Toggle the 'open' class on the navigation menu
-        navMenu.classList.toggle('open');
-    });
+    let lastScrollTop = 0;
+    const aboutNameContainer = document.querySelector(".about-name-container");
+    
+    window.addEventListener("scroll", function () {
+        let st = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (st > lastScrollTop) {
+            // Downscroll
+            aboutNameContainer.style.animationDirection = 'normal';
+        } else {
+            // Upscroll
+            aboutNameContainer.style.animationDirection = 'reverse';
+        }
+        
+        lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    }, false);
 });
