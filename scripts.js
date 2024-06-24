@@ -1,3 +1,4 @@
+// Wait until the page is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     // Find the menu button
     const menuToggle = document.querySelector('.menu-toggle');
@@ -8,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
     menuToggle.addEventListener('click', function () {
         // Toggle the 'open' class on the navigation menu
         nav.classList.toggle('open');
+        // Toggle the 'close' class on the menu button to change its appearance
+        menuToggle.classList.toggle('close');
     });
 });
 
@@ -25,13 +28,15 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
+// Ensure the script runs after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
-    let lastScrollTop = 0;
+    let lastScrollTop = 0; // Variable to store the last scroll position
     const aboutNameContainer = document.querySelector(".about-name-container");
-    
+
+    // Add an event listener to the window to detect scroll events
     window.addEventListener("scroll", function () {
-        let st = window.pageYOffset || document.documentElement.scrollTop;
-        
+        let st = window.pageYOffset || document.documentElement.scrollTop; // Get the current scroll position
+
         if (st > lastScrollTop) {
             // Downscroll
             aboutNameContainer.style.animationDirection = 'normal';
@@ -39,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Upscroll
             aboutNameContainer.style.animationDirection = 'reverse';
         }
-        
+
         lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
     }, false);
 });
