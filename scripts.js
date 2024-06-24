@@ -1,4 +1,3 @@
-// Wait until the page is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     // Find the menu button
     const menuToggle = document.querySelector('.menu-toggle');
