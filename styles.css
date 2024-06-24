@@ -133,12 +133,15 @@ nav ul li a:hover {
 .hero {
     background-color: #fff;
     padding: 50px 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 60px;
 }
 
 .hero-content {
-    margin-bottom: 30px;
+    flex: 1;
+    max-width: 50%; /* Limit the width of the content */
 }
 
 .hero-content h1 {
@@ -160,17 +163,19 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
+/* Image grid styling */
 .hero-images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create a 3-column layout */
+    grid-gap: 10px; /* Gap between images */
+    flex: 1;
+    max-width: 50%; /* Limit the width of the images */
 }
 
 .hero-images img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Adjust as needed */
 }
 
 /* Section styling */
@@ -383,6 +388,19 @@ footer {
         font-size: 20vw; /* Adjust font size for smaller screens */
     }
 
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content, .hero-images {
+        max-width: 100%; /* Ensure full width on small screens */
+    }
+
+    .hero-images {
+        grid-template-columns: 1fr 1fr; /* Change to 2 columns on smaller screens */
+    }
+
     .menu-toggle {
         display: block;
         background-color: #333;
@@ -401,5 +419,17 @@ footer {
     .home_logo img {
         width: 50px; /* Adjust as needed */
         height: auto;
+    }
+
+    .hero-images {
+        grid-template-columns: 1fr; /* Change to 1 column on very small screens */
+    }
+
+    .hero-content h1 {
+        font-size: 36px; /* Adjust font size for small screens */
+    }
+
+    .hero-content p {
+        font-size: 16px; /* Adjust font size for small screens */
     }
 }
