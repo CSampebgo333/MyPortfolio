@@ -85,33 +85,38 @@ nav ul li a:hover {
     }
 }
 
+canvas {
+    display: block;
+    position: relative;
+}
+
 /* Styling for the about section */
 .about-section {
     position: relative;
     height: 100vh;
-    background: url('images/Plans.png') no-repeat center center/cover;
+    background: url('images/IMG_2790.jp') no-repeat center center/cover;
     color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Changed to center for better alignment */
+    align-items: right; /* Changed to center for better alignment */
     overflow: hidden; /* Prevent horizontal scrolling */
     background-position: center top;
-    background-color: gray;
+    background-color: #999D9E;
+    border-radius: 10px;
 }
 
 .about-name-container {
     display: flex;
-    width: 200%; /* Double the width to accommodate two instances of the name */
+    width: 320%; /* Double the width to accommodate two instances of the name */
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
-    gap: 10em;
 }
 
 .about-name {
-    font-size: 10vw; /* Adjust font size as needed */
+    font-size: 15vw; /* Adjust font size as needed */
     white-space: nowrap;
     flex: 1; /* Make each name take up half of the container */
 }
@@ -442,6 +447,7 @@ footer {
     .hero-content p {
         font-size: 16px; /* Adjust font size for small screens */
     }
+    
 }
 
 /* Hamburger menu icon styling */
@@ -463,11 +469,11 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        border-radius: 20%;
         position: absolute;
-        top: 10px; /* Align with the header padding */
+        top: 50%px; /* Align with the header padding */
         right: 50px; /* Align with the header padding */
         z-index: 1100;
     }
@@ -504,5 +510,29 @@ footer {
         text-align: center;
         width: 100%;
         border-bottom: 1px solid #f0f0f0;
+    }
+}
+
+/* Media query for Galaxy Z Fold 5 - main screen */
+@media (min-width: 672px) and (max-width: 1812px) and (orientation: portrait) {
+    .about-name {
+        font-size: 10vw; /* Adjust font size for the main screen */
+    }
+
+    .about-name-container {
+        width: 200%; /* Adjust the width to fit the screen better */
+        animation-duration: 15s; /* Slower animation for better readability */
+    }
+}
+
+/* Media query for Galaxy Z Fold 5 - cover screen */
+@media (max-width: 672px) {
+    .about-name {
+        font-size: 20vw; /* Larger font size for the cover screen */
+    }
+
+    .about-name-container {
+        width: 400%; /* Adjust the width to fit the screen better */
+        animation-duration: 20s; /* Slower animation for better readability */
     }
 }
